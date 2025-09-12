@@ -268,7 +268,7 @@ body {
 .client-card {
     background: #fff;
     border-radius: 16px;
-    width: 450px;
+    width: 400px;
     height: 400px;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
     overflow: hidden;
