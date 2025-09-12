@@ -1,0 +1,378 @@
+body {
+    background: #fde0ec;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.card-custom {
+    background: #fecbe7;
+    border-radius: 15px;
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.icon-box {
+    width: 48px;
+    height: 48px;
+    background-color: #f48fb1;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.icon-box i {
+    font-size: 20px;
+    color: white;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 20px;
+    color: #fcfcfd;
+    background-color: #f48fb1;
+    line-height: 1.6;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: #783d6f;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.back-btn {
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12px;
+    cursor: pointer;
+    color: #4a044e;
+}
+
+.content {
+    margin-left: 240px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+.collapsed~.content {
+    margin-left: 80px;
+}
+
+.sparkles {
+    font-size: 15px;
+}
+
+.sidebar {
+    width: 310px;
+    background: linear-gradient(180deg, #fce4ec, #f8d0de);
+    min-height: 100vh;
+    display: flex;
+    padding-left: 30px;
+    padding-right: 20px;
+    flex-direction: column;
+}
+
+.sidebar .nav-link {
+    color: #0a0808;
+    padding: 15px;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.sidebar .nav-link.active,
+.sidebar .nav-link:hover {
+    background-color: #f8bbd0;
+    width: 270px;
+    color: #000;
+    font-weight: 500;
+}
+
+.premium {
+    margin-top: auto;
+    background: #f48fb1;
+    border-radius: 10px;
+    width: 1850px;
+    color: white;
+}
+
+.bg-gradient-pink {
+    background: linear-gradient(to right, #f48fb1, #f8bbd0);
+}
+
+.card-header {
+    font-weight: bold;
+}
+
+.badge {
+    padding: 6px 10px;
+    border-radius: 12px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+    body {
+        padding-top: 60px;
+    }
+}
+
+.header-title {
+    font-size: 2rem;
+    font-weight: 700;
+    background-color: #f48fb1;
+    color: #f8f8f9;
+}
+
+.header-subtitle {
+    color: #a87ca0;
+    font-size: 1.1rem;
+}
+
+.icon {
+    font-size: 1.8rem;
+    margin-right: 10px;
+    color: #e91e63;
+}
+
+.new-enquiry-btn {
+    background: linear-gradient(135deg, #f48fb1, #ce93d8);
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.new-enquiry-btn:hover {
+    background: linear-gradient(135deg, #ec407a, #ba68c8);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.new-enquiry-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Container for cards */
+
+.dashboard-cards {
+    display: flex;
+    gap: 1rem;
+    height: 150px;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+
+/* Each card */
+
+.card {
+    flex: 1 1 250px;
+    padding: 1.5rem;
+    border-radius: 12px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+}
+
+.card p {
+    margin: 0;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.card h2 {
+    margin: 0.2rem 0 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+
+/* Background gradients */
+
+.card.pink {
+    background: linear-gradient(to right, #fa8eb2, #f8c5d6);
+}
+
+.card.peach {
+    background: linear-gradient(to right, #fef0b0, #f784ab);
+    color: #333;
+}
+
+.card.purple {
+    background: linear-gradient(to right, #ce93d8, #eae0fd);
+    color: #2c003e;
+}
+
+
+/* Icon on the right */
+
+.card .icon {
+    font-size: 1.8rem;
+    opacity: 0.7;
+}
+
+
+/* Search input */
+
+.client-search {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 16px;
+    padding: 0.75rem 1.2rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    max-width: 100%;
+}
+
+.client-search input {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    flex-grow: 1;
+    padding-left: 0.5rem;
+}
+
+.search-icon {
+    font-size: 1.2rem;
+    color: #888;
+}
+
+.client-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: flex-start;
+}
+
+.client-card {
+    background: #fff;
+    border-radius: 16px;
+    width: 495px;
+    height: 400px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Header */
+
+.card-header {
+    background: linear-gradient(to right, #f8bbd0, #fce4ec);
+    padding: 1rem;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.client-name {
+    font-weight: 400;
+    font-size: 25px;
+    color: #4b0035;
+}
+
+.status {
+    padding: 0.25rem 0.6rem;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+/* Status colors */
+
+.status.booked {
+    background-color: #e0f7fa;
+    color: #00796b;
+}
+
+.status.prospect {
+    background-color: #fff9c4;
+    color: #fbc02d;
+}
+
+.status.married {
+    background-color: #e1bee7;
+    color: #6a1b9a;
+}
+
+
+/* Body */
+
+.card-body {
+    padding: 1rem;
+    font-size: 0.95rem;
+    color: #530f49;
+}
+
+.card-body p {
+    margin: 0.3rem 0;
+}
+
+.services {
+    margin-top: 1.15rem;
+}
+
+.service-pill {
+    background: #f1f1f1;
+    border-radius: 999px;
+    padding: 0.4rem 0.8rem;
+    font-size: 15px;
+    display: inline-block;
+    margin: 0.2rem 0.3rem 0 0;
+}
+
+
+/* Footer */
+
+.card-footer {
+    border-top: 1px solid #eee;
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.spent {
+    font-weight: bold;
+    color: #d81b60;
+    font-size: 1rem;
+}
+
+.spent span {
+    display: block;
+    font-size: 0.75rem;
+    color: #999;
+    font-weight: normal;
+}
+
+.actions {
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    gap: 0.7rem;
+}

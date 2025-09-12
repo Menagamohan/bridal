@@ -1,0 +1,395 @@
+body {
+    background: #fde0ec;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.card-custom {
+    background: #fecbe7;
+    border-radius: 15px;
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.icon-box {
+    width: 48px;
+    height: 48px;
+    background-color: #f48fb1;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.icon-box i {
+    font-size: 20px;
+    color: white;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 20px;
+    color: #fcfcfd;
+    background-color: #f48fb1;
+    line-height: 1.6;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: #783d6f;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.back-btn {
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12px;
+    cursor: pointer;
+    color: #4a044e;
+}
+
+.content {
+    margin-left: 240px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+.collapsed~.content {
+    margin-left: 80px;
+}
+
+.sparkles {
+    font-size: 15px;
+}
+
+.sidebar {
+    width: 310px;
+    background: linear-gradient(180deg, #fce4ec, #f8d0de);
+    min-height: 100vh;
+    display: flex;
+    padding-left: 30px;
+    padding-right: 20px;
+    flex-direction: column;
+}
+
+.sidebar .nav-link {
+    color: #0a0808;
+    padding: 15px;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.sidebar .nav-link.active,
+.sidebar .nav-link:hover {
+    background-color: #f8bbd0;
+    width: 270px;
+    color: #000;
+    font-weight: 500;
+}
+
+.premium {
+    margin-top: auto;
+    background: #f48fb1;
+    border-radius: 10px;
+    width: 1850px;
+    color: white;
+}
+
+.bg-gradient-pink {
+    background: linear-gradient(to right, #f48fb1, #f8bbd0);
+}
+
+.card-header {
+    font-weight: bold;
+}
+
+.badge {
+    padding: 6px 10px;
+    border-radius: 12px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+    body {
+        padding-top: 60px;
+    }
+}
+
+.header-title {
+    font-size: 2rem;
+    font-weight: 700;
+    background-color: #f48fb1;
+    color: #f8f8f9;
+}
+
+.header-subtitle {
+    color: #a87ca0;
+    font-size: 1.1rem;
+}
+
+.icon {
+    font-size: 1.8rem;
+    margin-right: 10px;
+    color: #e91e63;
+}
+
+.new-enquiry-btn {
+    background: linear-gradient(135deg, #f48fb1, #ce93d8);
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.new-enquiry-btn:hover {
+    background: linear-gradient(135deg, #ec407a, #ba68c8);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.new-enquiry-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.metrics-container {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.metric-card {
+    flex: 1 1 300px;
+    border-radius: 12px;
+    color: #fff;
+    padding: 1.2rem 1.5rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s;
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.metric-label {
+    font-size: 1rem;
+    opacity: 0.85;
+    margin-bottom: 0.3rem;
+}
+
+.metric-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.metric-icon {
+    font-size: 1.8rem;
+    opacity: 0.8;
+}
+
+
+/* Special color for overdue */
+
+.metric-value.overdue {
+    color: #ff3b3b;
+}
+
+
+/* Gradient Backgrounds */
+
+.pink-gradient {
+    background: linear-gradient(to right, #f672a7, #f25d8e);
+    color: white;
+}
+
+.peach-gradient {
+    background: linear-gradient(to right, #f3e39d, #f78da7);
+    color: #3b003b;
+}
+
+.purple-gradient {
+    background: linear-gradient(to right, #e6d4f6, #cba7f5);
+    color: #3b003b;
+}
+
+
+/* Container Styling */
+
+.payment-management,
+.recent-payments {
+    background: linear-gradient(to bottom, #fce4ec, #f8bbd0);
+    padding: 1.5rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Header */
+
+.payment-management h2 {
+    font-size: 1.8rem;
+    color: #4a004a;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+/* Buttons Row */
+
+.payment-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.payment-buttons button {
+    flex: 1 1 180px;
+    background: #fff0f5;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+    transition: background 0.3s ease;
+}
+
+.payment-buttons button:hover {
+    background: #ffe3ed;
+}
+
+
+/* Table Styling */
+
+.recent-payments h3 {
+    font-size: 1.5rem;
+    color: #4a004a;
+    margin-bottom: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fffafc;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+thead {
+    background: #f8c2d0;
+}
+
+thead th {
+    padding: 1rem;
+    text-align: left;
+    color: #4a004a;
+}
+
+tbody td {
+    padding: 1rem;
+    border-top: 1px solid #f4d7df;
+}
+
+.service {
+    color: #8e3b8c;
+}
+
+.date {
+    color: #b45da2;
+}
+
+
+/* Status Badges */
+
+.status {
+    padding: 0.4em 0.9em;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.status.paid {
+    background: #d1ffe4;
+    color: #007f41;
+}
+
+.status.pending {
+    background: #fff6c5;
+    color: #8a6d00;
+}
+
+.status.overdue {
+    background: #ffd2d2;
+    color: #cc0000;
+}
+
+.actions {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+
+/* Responsive Adjustments */
+
+@media (max-width: 768px) {
+    .payment-buttons {
+        flex-direction: column;
+    }
+    .payment-buttons button {
+        width: 100%;
+    }
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+    thead {
+        display: none;
+    }
+    tr {
+        margin-bottom: 1rem;
+        background: #fffafc;
+        padding: 1rem;
+        border-radius: 12px;
+    }
+    td {
+        padding: 0.5rem 0;
+        display: flex;
+        justify-content: space-between;
+    }
+}

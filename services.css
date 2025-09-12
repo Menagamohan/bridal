@@ -1,0 +1,287 @@
+body {
+    background: #fde0ec;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.card-custom {
+    background: #fecbe7;
+    border-radius: 15px;
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.icon-box {
+    width: 48px;
+    height: 48px;
+    background-color: #f48fb1;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.icon-box i {
+    font-size: 20px;
+    color: white;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 20px;
+    color: #fcfcfd;
+    background-color: #f48fb1;
+    line-height: 1.6;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: #783d6f;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.back-btn {
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12px;
+    cursor: pointer;
+    color: #4a044e;
+}
+
+.content {
+    margin-left: 240px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+.collapsed~.content {
+    margin-left: 80px;
+}
+
+.sparkles {
+    font-size: 15px;
+}
+
+.sidebar {
+    width: 310px;
+    background: linear-gradient(180deg, #fce4ec, #f8d0de);
+    min-height: 100vh;
+    display: flex;
+    padding-left: 30px;
+    padding-right: 20px;
+    flex-direction: column;
+}
+
+.sidebar .nav-link {
+    color: #0a0808;
+    padding: 15px;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.sidebar .nav-link.active,
+.sidebar .nav-link:hover {
+    background-color: #f8bbd0;
+    width: 270px;
+    color: #000;
+    font-weight: 500;
+}
+
+.premium {
+    margin-top: auto;
+    background: #f48fb1;
+    border-radius: 10px;
+    width: 1850px;
+    color: white;
+}
+
+.bg-gradient-pink {
+    background: linear-gradient(to right, #f48fb1, #f8bbd0);
+}
+
+.card-header {
+    font-weight: bold;
+}
+
+.badge {
+    padding: 6px 10px;
+    border-radius: 12px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+    body {
+        padding-top: 60px;
+    }
+}
+
+.header-title {
+    font-size: 2rem;
+    font-weight: 700;
+    background-color: #f48fb1;
+    color: #f8f8f9;
+}
+
+.header-subtitle {
+    color: #a87ca0;
+    font-size: 1.1rem;
+}
+
+.icon {
+    font-size: 1.8rem;
+    margin-right: 10px;
+    color: #e91e63;
+}
+
+.new-enquiry-btn {
+    background: linear-gradient(135deg, #f48fb1, #ce93d8);
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.new-enquiry-btn:hover {
+    background: linear-gradient(135deg, #ec407a, #ba68c8);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.new-enquiry-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-cards {
+    display: flex;
+    gap: 1.5rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    flex: 1 1 300px;
+    background: #fff9fc;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Header Bar */
+
+.card-header {
+    background: transparent;
+    padding: 0.75rem;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: #222;
+    margin: -1.5rem -1.5rem 1rem -1.5rem;
+    padding: 1rem 1.5rem;
+}
+
+.card-header h3 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.icons span {
+    margin-left: 0.6rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+
+/* Description */
+
+.service-card p {
+    color: #6a4a58;
+    margin: 0 0 1.2rem;
+}
+
+
+/* Price & Duration */
+
+.price-duration {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.price {
+    color: #e91e63;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.duration {
+    color: #6a4a58;
+}
+
+
+/* Book Now Button */
+
+.book-btn {
+    background: linear-gradient(to right, #f8bbd0, #f48fb1);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    color: #3b003b;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-end;
+    transition: 0.3s;
+}
+
+.book-btn:hover {
+    opacity: 0.9;
+}
+
+
+/* Gradient Top Bar Backgrounds */
+
+.pink-gradient .card-header {
+    background: linear-gradient(to right, #f7acf0, #f397bc);
+    color: white;
+}
+
+.rose-gradient .card-header {
+    background: linear-gradient(to right, #f8c0ca, #efb4b4);
+    color: #3b003b;
+}
+
+.peach-gradient .card-header {
+    background: linear-gradient(to right, #f3e39d, #f78da7);
+    color: #3b003b;
+}

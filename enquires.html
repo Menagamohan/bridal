@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bridal Enquiries</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="enquires.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- Font Awesome 6 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <aside class="sidebar p-3">
+            <div class="card-custom">
+                <div class="icon-box">
+                    <!-- <i class="bi bi-crown"></i> -->
+                    <i class="fa-solid fa-crown"></i>
+                </div>
+                <div><br><br>
+                    <div class="title">Bridal Bliss</div>
+                    <div class="subtitle">
+                        <span class="sparkles">✨</span> Management Studio
+                    </div>
+                </div>
+                <div class="back-btn" id="toggleBtn">&lt;</div>
+            </div><br><br>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a href="index.html" class="nav-link"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a></li>
+                <li class="nav-item"><a href="enquires.html" class="nav-link active"><i class="bi bi-telephone me-2"></i>Enquiries</a></li>
+                <li class="nav-item"><a href="client.html" class="nav-link"><i class="bi bi-people me-2"></i>Clients</a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-calendar-event me-2"></i>Appointments</a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-bag-check me-2"></i>Services</a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-credit-card me-2"></i>Payments</a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-box-seam me-2"></i>Inventory</a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-bar-chart-line me-2"></i>Reports</a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-gear"></i></i>Settings</a></li>
+                <li class="nav-item mt-auto premium">
+                    <div class="p-3 text-left">
+                        <strong>🌟 Premium Studio</strong>
+                        <p class="small">Unlock advanced analytics, unlimited bookings & AI-powered insights</p>
+                        <button class="btn btn-light btn-sm">Upgrade Now 💎</button>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </aside>
+        <script>
+            const toggleBtn = document.getElementById("toggleBtn");
+            const sidebar = document.getElementById("sidebar");
+
+            toggleBtn.addEventListener("click", () => {
+                sidebar.classList.toggle("collapsed");
+
+                // change button direction
+                if (sidebar.classList.contains("collapsed")) {
+                    toggleBtn.innerHTML = ">";
+                } else {
+                    toggleBtn.innerHTML = "&lt;";
+                }
+            });
+
+            function toggleMenu(button) {
+                const wrapper = button.parentElement;
+                const menu = wrapper.querySelector('.dropdown-menu');
+                menu.classList.toggle('hidden');
+
+                // Close other open menus
+                document.querySelectorAll('.dropdown-menu').forEach(m => {
+                    if (m !== menu) m.classList.add('hidden');
+                });
+            }
+
+            // Close the menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.more-menu-wrapper')) {
+                    document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.add('hidden'));
+                }
+            });
+        </script>
+
+        <div class="container-fluid py-4">
+
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h1 class="header-title">
+                        <span class="icon">👑</span>Enquiry Management
+                    </h1>
+                    <p class="header-subtitle">
+                        Track and nurture all your beautiful bridal enquiries ✨
+                    </p>
+                </div>
+                <div>
+                    <button class="new-enquiry-btn btn-primary">
+          + New Enquiry 💎
+        </button>
+                </div>
+            </div>
+
+
+            <div class="search-tabs-wrapper">
+                <div class="search-bar">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search by name, phone, or service... 💐" />
+                </div>
+
+                <div class="tabs">
+                    <button class="tab-btn active">All</button>
+                    <button class="tab-btn">New</button>
+                    <button class="tab-btn">Contacted</button>
+                    <button class="tab-btn">Follow-up</button>
+                    <button class="tab-btn">Converted</button>
+                </div>
+            </div><br>
+
+            <!-- enquiry card -->
+            <div class="enquiry-card">
+                <div class="enquiry-left">
+                    <div class="avatar">PS</div>
+                    <div class="details">
+                        <h4>Priya Sharma <span class="tag new">NEW</span> <span class="tag source">✨ Instagram</span></h4>
+                        <p>📞 +91 98765 43210 &nbsp;&nbsp; 🏠 Event: 15/12/2024</p>
+                        <div class="progress-bar pink"></div>
+                        <div class="progress-bar yellow"></div>
+                    </div>
+                </div>
+                <div class="enquiry-actions">
+                    <button class="btn call">📞 Call</button>
+                    <button class="btn message">💬 Message</button>
+                    <button class="btn schedule">📅 Schedule</button>
+                    <div class="more-menu-wrapper">
+                        <button class="btn more" onclick="toggleMenu(this)">⋯</button>
+
+                        <div class="dropdown-menu hidden">
+                            <div class="dropdown-item">👤 Convert to Client 💎</div>
+                            <div class="dropdown-item">✨ Edit Details</div>
+                            <div class="dropdown-item">📋 View History</div>
+                            <div class="dropdown-item drop">❤️ Mark as Dropped</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="enquiry-card">
+                <div class="enquiry-left">
+                    <div class="avatar">AR</div>
+                    <div class="details">
+                        <h4>Ananya Reddy <span class="tag contacted">CONTACTED</span> <span class="tag source">✨ Referral</span></h4>
+                        <p>📞 +91 87654 32109 &nbsp;&nbsp; 🏠 Event: 20/11/2024</p>
+                        <div class="progress-bar pink"></div>
+                        <div class="progress-bar yellow"></div>
+                    </div>
+                </div>
+                <div class="enquiry-actions">
+                    <button class="btn call">📞 Call</button>
+                    <button class="btn message">💬 Message</button>
+                    <button class="btn schedule">📅 Schedule</button>
+                    <div class="more-menu-wrapper">
+                        <button class="btn more" onclick="toggleMenu(this)">⋯</button>
+
+                        <div class="dropdown-menu hidden">
+                            <div class="dropdown-item">👤 Convert to Client 💎</div>
+                            <div class="dropdown-item">✨ Edit Details</div>
+                            <div class="dropdown-item">📋 View History</div>
+                            <div class="dropdown-item drop">❤️ Mark as Dropped</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="enquiry-card">
+                <div class="enquiry-left">
+                    <div class="avatar">KP</div>
+                    <div class="details">
+                        <h4>Kavya Patel <span class="tag coverted">CONVERTED</span> <span class="tag source">✨ Wibesite</span></h4>
+                        <p>📞 +91 76543 21098 &nbsp;&nbsp; 🏠 Event: 28/12/2024</p>
+                        <div class="progress-bar pink"></div>
+                        <div class="progress-bar yellow"></div>
+                    </div>
+                </div>
+                <div class="enquiry-actions">
+                    <button class="btn call">📞 Call</button>
+                    <button class="btn message">💬 Message</button>
+                    <button class="btn schedule">📅 Schedule</button>
+                    <div class="more-menu-wrapper">
+                        <button class="btn more" onclick="toggleMenu(this)">⋯</button>
+
+                        <div class="dropdown-menu hidden">
+                            <div class="dropdown-item">👤 Convert to Client 💎</div>
+                            <div class="dropdown-item">✨ Edit Details</div>
+                            <div class="dropdown-item">📋 View History</div>
+                            <div class="dropdown-item drop">❤️ Mark as Dropped</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="enquiry-card">
+                <div class="enquiry-left">
+                    <div class="avatar">RG</div>
+                    <div class="details">
+                        <h4>Ritika Gupta <span class="tag follow">FOLLOW-UP</span> <span class="tag source">✨ Facebok</span></h4>
+                        <p>📞 +91 65432 10987 &nbsp;&nbsp; 🏠 Event: 30/11/2024</p>
+                        <div class="progress-bar pink"></div>
+                        <div class="progress-bar yellow"></div>
+                    </div>
+                </div>
+                <div class="enquiry-actions">
+                    <button class="btn call">📞 Call</button>
+                    <button class="btn message">💬 Message</button>
+                    <button class="btn schedule">📅 Schedule</button>
+                    <div class="more-menu-wrapper">
+                        <button class="btn more" onclick="toggleMenu(this)">⋯</button>
+
+                        <div class="dropdown-menu hidden">
+                            <div class="dropdown-item">👤 Convert to Client 💎</div>
+                            <div class="dropdown-item">✨ Edit Details</div>
+                            <div class="dropdown-item">📋 View History</div>
+                            <div class="dropdown-item drop">❤️ Mark as Dropped</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <!-- Bootstrap JS -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        </div>
+
+</body>
+
+</html>
