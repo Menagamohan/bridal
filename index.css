@@ -369,6 +369,7 @@ body {
     background: linear-gradient(to right, #ff758c, #ff7eb3, #a18cd1, #fbc2eb, #f6d365);
     color: #fff;
     font-weight: 600;
+    width: 100px;
     border: none;
     border-radius: 20px 20px 0 0 !important;
     padding: 15px 20px;
