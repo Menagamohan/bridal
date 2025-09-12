@@ -157,6 +157,13 @@ body {
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.new {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
 }
 
 .new-enquiry-btn:hover {
