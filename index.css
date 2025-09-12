@@ -101,7 +101,7 @@ body {
     margin-bottom: 340px;
     background: #f48fb1;
     border-radius: 10px;
-    width: 1650px;
+    width: 1550px;
     color: white;
 }
 
@@ -277,7 +277,7 @@ body {
     border: none;
     border-radius: 20px;
     overflow: hidden;
-    width: 400px;
+    width: 350px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
