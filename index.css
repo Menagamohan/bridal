@@ -254,7 +254,7 @@ body {
     border: none;
     border-radius: 20px;
     overflow: hidden;
-    width: 850px;
+    max-width: 850px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -277,7 +277,7 @@ body {
     border: none;
     border-radius: 20px;
     overflow: hidden;
-    width: 450px;
+    width: 480px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
