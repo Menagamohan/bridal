@@ -13,6 +13,9 @@
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -31,7 +34,9 @@
                         <span class="sparkles">✨</span> Management Studio
                     </div>
                 </div>
-                <div class="back-btn" id="toggleBtn">&lt;</div>
+                <p>
+                    <div class="back-btn" id="toggleBtn" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">&lt;</div>
+                </p>
             </div><br><br>
             <ul class="nav flex-column">
                 <li class="nav-item"><a href="index.html" class="nav-link"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a></li>
@@ -53,26 +58,9 @@
                 </li> -->
             </ul>
         </aside>
-        <script>
-            const toggleBtn = document.getElementById("toggleBtn");
-            const sidebar = document.getElementById("sidebar");
-
-            toggleBtn.addEventListener("click", () => {
-                sidebar.classList.toggle("collapsed");
-
-                // change button direction
-                if (sidebar.classList.contains("collapsed")) {
-                    toggleBtn.innerHTML = ">";
-                } else {
-                    toggleBtn.innerHTML = "&lt;";
-                }
-            });
-        </script>
-
 
 
         <div class="container-fluid py-4">
-
             <!-- Header -->
             <div class="d-flex justify-content-between align-items-center">
                 <div>
@@ -84,11 +72,13 @@
                     </p>
                 </div>
                 <div>
-                    <button class="new-enquiry-btn btn-primary">
+                    <p>
+                        <button class="new-enquiry-btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
           + Add New Client 
-        </button>
+        </button></p>
                 </div>
             </div><br>
+
 
 
             <div class="dashboard-cards">
@@ -121,6 +111,51 @@
                 <span class="search-icon">🔍</span>
                 <input type="text" placeholder="Search clients by name or email..." />
             </div><br><br>
+
+
+            <!-- <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                </div>
+            </div> -->
+
+            <div class="collapse" id="collapseExample">
+                <div class="card-header">
+                    <i class="bi bi-heart"></i>
+                    <span>Add New Client</span>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" placeholder="Emma Thompson" />
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" placeholder="emma@example.com" />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="text" placeholder="+1 (555) 0123" />
+                            </div>
+                            <div class="form-group">
+                                <label>Wedding Date</label>
+                                <input type="date" />
+                            </div>
+                        </div>
+
+                        <div class="button-row">
+                            <button type="submit" class="btn-pink">Add Client</button>
+                            <button type="button" class="btn-secondary">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
 
 
             <!-- client card -->
