@@ -31,8 +31,7 @@ body {
 .title {
     font-weight: 700;
     font-size: 20px;
-    color: #fcfcfd;
-    background-color: #f48fb1;
+    color: #3e1d3f;
     line-height: 1.6;
 }
 
@@ -131,8 +130,7 @@ body {
 .header-title {
     font-size: 2rem;
     font-weight: 700;
-    background-color: #f48fb1;
-    color: #f8f8f9;
+    color: #361c42;
 }
 
 .header-subtitle {
@@ -339,13 +337,14 @@ body {
 }
 
 .progress-bar {
-    height: 27px;
-    border-radius: 10px;
-    margin: 4px 0;
-    max-width: 300px;
+    color: #401a3c;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: left;
 }
 
-.progress-bar.pink {
+
+/* .progress-bar.pink {
     background: linear-gradient(to right, #f06292, #f48fb1);
     width: 90%;
 }
@@ -353,7 +352,7 @@ body {
 .progress-bar.yellow {
     background: linear-gradient(to right, #f7ebb8, #f06292);
     width: 90%;
-}
+} */
 
 .enquiry-actions {
     display: flex;

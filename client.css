@@ -1,5 +1,5 @@
 body {
-    background: #fde0ec;
+    background-color: rgb(255, 192, 236);
     font-family: 'Segoe UI', sans-serif;
 }
 
@@ -31,8 +31,7 @@ body {
 .title {
     font-weight: 700;
     font-size: 20px;
-    color: #fcfcfd;
-    background-color: #f48fb1;
+    color: #3e1a3f;
     line-height: 1.6;
 }
 
@@ -131,8 +130,7 @@ body {
 .header-title {
     font-size: 2rem;
     font-weight: 700;
-    background-color: #f48fb1;
-    color: #f8f8f9;
+    color: #382348;
 }
 
 .header-subtitle {

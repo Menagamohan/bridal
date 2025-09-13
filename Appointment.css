@@ -31,8 +31,7 @@ body {
 .title {
     font-weight: 700;
     font-size: 20px;
-    color: #fcfcfd;
-    background-color: #f48fb1;
+    color: #401d45;
     line-height: 1.6;
 }
 
@@ -131,8 +130,7 @@ body {
 .header-title {
     font-size: 2rem;
     font-weight: 700;
-    background-color: #f48fb1;
-    color: #f8f8f9;
+    color: #421c3c;
 }
 
 .header-subtitle {
