@@ -133,8 +133,7 @@ body {
 .header-title {
     font-size: 2rem;
     font-weight: 700;
-    background-color: #f48fb1;
-    color: #f8f8f9;
+    color: #462d52;
 }
 
 .header-subtitle {
@@ -234,150 +233,151 @@ body {
 
 /* Section Cards (Recent Enquiries, Schedule, etc) */
 
-.card-custom {
-    border: none;
-    border-radius: 20px;
-    overflow: hidden;
-    width: 850px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
 
-.card-custom:hover {
-    transform: translateY(-15px);
-}
-
-.card-customs:hover {
-    transform: translateY(-15px);
-}
+/* Card Common */
 
 .card-custom {
-    border: none;
     border-radius: 20px;
+    background: linear-gradient(135deg, #ffe2ec, #f8d2e3, #f3d8ef);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     overflow: hidden;
-    max-width: 850px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.card-header-custom {
-    background: linear-gradient(to right, #ff758c, #ff7eb3);
-    color: #fff;
-    font-weight: 600;
-    font-size: 25px;
-    width: 850px;
-    height: 100px;
+    width: 700px;
     border: none;
-    border-radius: 20px 20px 0 0 !important;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .card-customs {
-    border: none;
     border-radius: 20px;
+    background: linear-gradient(135deg, #ffe2ec, #f8d2e3, #f3d8ef);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     overflow: hidden;
-    width: 400px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+
+/* Card headers */
+
+.card-header-custom {
+    padding: 12px 20px;
+    font-weight: 600;
+    width: 700px;
+    font-size: 18px;
+    background: linear-gradient(90deg, #f06292, #f48fb1);
+    color: white;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .card-header-customs {
-    background: linear-gradient(to right, #ff758c, #ff7eb3);
-    color: #fff;
+    padding: 12px 20px;
     font-weight: 600;
-    font-size: 25px;
-    width: 850px;
-    height: 100px;
-    border: none;
-    border-radius: 20px 20px 0 0 !important;
-    padding: 15px 20px;
+    font-size: 18px;
+    background: linear-gradient(90deg, #f06292, #f48fb1);
+    color: white;
+    border-radius: 20px 20px 0 0;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
+
+
+/* List group items */
 
 .list-group-item {
     border: none;
-    padding: 18px 20px;
-    background: #ffe6f0;
-    width: 850px;
-    margin: 8px 15px;
-    border-radius: 15px !important;
+    padding: 14px 20px;
+    background: transparent;
+    width: 700px;
 }
 
-.list-group-item strong {
-    font-size: 1rem;
-}
-
-.badge-custom {
-    font-size: 0.75rem;
-    padding: 6px 12px;
-    border-radius: 12px;
-}
-
-.time-box {
-    background: #ff4f75;
-    color: #fff;
-    font-weight: bold;
-    padding: 6px 12px;
-    border-radius: 10px;
-    margin-right: 12px;
-    display: inline-block;
-}
-
-.schedule-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.schedule-info {
-    flex-grow: 1;
-}
-
-.checkmark {
-    font-size: 1.2rem;
-    color: #4caf50;
-}
-
-.enquiry-item {
-    background: #f9dce8;
-    margin: 10px 15px;
-    border-radius: 15px !important;
-    padding: 15px 20px;
+.list-group-items {
     border: none;
+    padding: 14px 20px;
+    background: transparent;
+    width: 460px;
 }
+
+
+/* Enquiries avatar circle */
 
 .avatar-circle {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #ff758c, #ff7eb3, #ffd1dc);
+    background: linear-gradient(135deg, #f48fb1, #ce93d8, #81d4fa);
+    color: #fff;
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
-    font-weight: bold;
-    font-size: 0.9rem;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    font-size: 15px;
 }
 
+
+/* Badges */
+
 .badge-status {
-    padding: 6px 12px;
+    padding: 6px 10px;
     border-radius: 20px;
-    font-size: 0.75rem;
+    font-size: 12px;
     font-weight: 600;
 }
 
-.badge-status.contacted {
-    background: #fff3b0;
-    color: #6a4f00;
+.badge-status.bg-primary {
+    background: #8ec5ff;
+}
+
+.badge-status.bg-success {
+    background: #a3e4a0;
+}
+
+.badge-status.bg-info {
+    background: #ffd27f;
+    color: #333;
+}
+
+
+/* Schedule section */
+
+.schedule-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12px;
+    margin: 10px;
+    padding: 12px 16px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.schedule-info strong {
+    font-size: 15px;
+}
+
+.time-box {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background: #f06292;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-right: 15px;
 }
 
 .checkmark {
-    font-size: 1.3rem;
-    color: #28a745;
-    /* Green */
+    font-size: 18px;
+    color: #4caf50;
+    font-weight: bold;
+}
+
+
+/* Hover effect */
+
+.enquiry-item:hover,
+.schedule-item:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease;
 }
 
 .card-customes {
