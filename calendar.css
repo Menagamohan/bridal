@@ -1,0 +1,64 @@
+body {
+    background-color: #fff0f5;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.text-pink {
+    color: #d63384;
+}
+
+.calendar-view {
+    border-radius: 10px;
+}
+
+.active-date {
+    background-color: #ff5fa2;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+.back-btn {
+    background: #fceef1;
+    padding: 10px 12px;
+    border-radius: 12px;
+    font-size: 18px;
+    color: #773344;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.back-btn:hover {
+    background: #fbd9e2;
+}
+
+.btn-pink {
+    background-color: #ff5fa2;
+    color: white;
+}
+
+.btn-pink:hover {
+    background-color: #e04e91;
+    color: white;
+}
+
+.btn-outline-pink {
+    border: 1px solid #ff5fa2;
+    color: #ff5fa2;
+}
+
+.btn-outline-pink:hover {
+    background-color: #ff5fa2;
+    color: white;
+}
+
+.card {
+    border: none;
+    background-color: #fff8fb;
+    border-radius: 10px;
+}
