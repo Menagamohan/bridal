@@ -140,11 +140,9 @@ textarea {
 }
 
 .gradient-bar {
-    width: 200px;
-    height: 24px;
-    background: linear-gradient(to right, #e75480, #dda0dd, #f5deb3);
-    border-radius: 6px;
-    margin-bottom: 4px;
+    color: #381a3d;
+    font-size: 30px;
+    font-weight: 500;
 }
 
 .header-text p {

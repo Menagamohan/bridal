@@ -14,235 +14,238 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 
-<body style="background-color: #fde0ec;">
+<body style="background-color: #f9ecf1;">
 
-    <div class="d-flex">
+    <div class="wrapper">
         <!-- Sidebar -->
-        <aside class="sidebar p-3">
-            <div class="card-custom">
-                <div class="icon-box">
-                    <!-- <i class="bi bi-crown"></i> -->
+        <aside class="sidebar" id="sidebar">
+            <div class="brand-info d-flex align-items-center mb-4">
+                <i class="bi bi-crown me-2"></i>
+                <div>
                     <i class="fa-solid fa-crown"></i>
+                    <span class="brand-text" style="color: rgb(41, 21, 59); font-size: 30px; font-weight: 600;">Bridal Bliss</span>
+                    <span class="brand-text">✨ Management Studio</span>
                 </div>
-                <div><br><br>
-                    <div class="title">Bridal Bliss</div>
-                    <div class="subtitle">
-                        <span class="sparkles">✨</span> Management Studio
-                    </div>
-                </div>
-                <p>
-                    <div class="back-btn" id="toggleBtn" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">&lt;</div>
-                </p>
-            </div><br><br>
-            <ul class="nav flex-column">
-                <li class="nav-item"><a href="index.html" class="nav-link"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a></li>
-                <li class="nav-item"><a href="enquires.html" class="nav-link"><i class="bi bi-telephone me-2"></i>Enquiries</a></li>
-                <li class="nav-item"><a href="client.html" class="nav-link active"><i class="bi bi-people me-2"></i>Clients</a></li>
-                <li class="nav-item"><a href="Appointment.html" class="nav-link"><i class="bi bi-calendar-event me-2"></i>Appointments</a></li>
-                <li class="nav-item"><a href="services.html" class="nav-link"><i class="bi bi-bag-check me-2"></i>Services</a></li>
-                <li class="nav-item"><a href="Payment.html" class="nav-link"><i class="bi bi-credit-card me-2"></i>Payments</a></li>
-                <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-box-seam me-2"></i>Inventory</a></li>
-                <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-bar-chart-line me-2"></i>Reports</a></li>
-                <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-gear"></i></i>Settings</a></li>
-                <!-- <li class="nav-item mt-auto premium">
-                    <div class="p-3 text-left">
-                        <strong>🌟 Premium Studio</strong>
-                        <p class="small">Unlock advanced analytics, unlimited bookings & AI-powered insights</p>
-                        <button class="btn btn-light btn-sm">Upgrade Now 💎</button>
-                        </button>
-                    </div>
-                </li> -->
-            </ul>
+            </div>
+
+            <nav class="nav-links">
+                <a href="index.html"><i class="bi bi-speedometer2"></i><span>Dashboard</span></a>
+                <a href="enquires.html"><i class="bi bi-telephone"></i><span>Enquiries</span></a>
+                <a href="client.html" class="nav-link active"><i class="bi bi-people"></i><span>Clients</span></a>
+                <a href="Appointment.html"><i class="bi bi-calendar-event"></i><span>Appointments</span></a>
+                <a href="services.html"><i class="bi bi-bag-check"></i><span>Services</span></a>
+                <a href="Payment.html"><i class="bi bi-credit-card"></i><span>Payments</span></a>
+                <a href="#"><i class="bi bi-box-seam"></i><span>Inventory</span></a>
+                <a href="#"><i class="bi bi-bar-chart-line"></i><span>Reports</span></a>
+                <a href="#"><i class="bi bi-gear"></i><span>Settings</span></a>
+            </nav>
         </aside>
 
+        <!-- Main Content -->
+        <div class="main-content" id="main-content"><br>
+            <button id="toggle-btn" class="toggle-btn"><i class="bi bi-list"></i></button>
 
-        <div class="container-fluid py-4">
-            <!-- Header -->
-            <div class="d-flex justify-content-between align-items-center">
-                <div>
-                    <h1 class="header-title">
-                        💖 Client Management
-                    </h1>
-                    <p class="header-subtitle">
-                        Manage your beautiful brides and their journey
-                    </p>
-                </div>
-                <div>
-                    <p>
-                        <button class="new-enquiry-btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-          + Add New Client 
-        </button></p>
-                </div>
-            </div><br>
+            <div class="container-fluid">
+                <h1>💖 Client Management</h1>
+                <p>Manage your beautiful brides and their journey</p>
 
 
+                <!-- Sample Buttons -->
+                <div class="mb-4" style="position: fixed; top: 60px; right: 20px; z-index: 1000;">
+                    <a href="new booking.html" class="btn btn-white border new-enquiry-btn" data-bs-toggle="modal" data-bs-target="#newclient">
+                         + Add New Client 💎
+                    </a>
+                </div><br><br>
 
-            <div class="dashboard-cards">
-                <div class="card pink">
-                    <div>
-                        <p>Total Clients</p>
-                        <h2>3</h2>
+
+                <!-- Modal -->
+                <div class="modal fade" id="newclient" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content" style="background-color: #f8e4ec;">
+                            <div class="modal-header">
+                                <div class="card-header">
+                                    <i class="bi bi-heart"></i>
+                                    <span>Add New Client</span>
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label>Full Name</label>
+                                            <input type="text" placeholder="Emma Thompson" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Email Address</label>
+                                            <input type="email" placeholder="emma@example.com" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label>Phone Number</label>
+                                            <input type="text" placeholder="+1 (555) 0123" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Wedding Date</label>
+                                            <input type="date" />
+                                        </div>
+                                    </div>
+
+                                    <div class="button-row">
+                                        <button type="submit" class="btn-pink">Add Client</button>
+                                        <button type="button" class="btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
                     </div>
-                    <div class="icon">👥</div>
                 </div>
 
-                <div class="card peach">
-                    <div>
-                        <p>Booked Weddings</p>
-                        <h2>1</h2>
+
+
+
+
+
+                <div class="dashboard-cards">
+                    <div class="card pink">
+                        <div>
+                            <p>Total Clients</p>
+                            <h2>3</h2>
+                        </div>
+                        <div class="icon">👥</div>
                     </div>
-                    <div class="icon">❤️</div>
+
+                    <div class="card peach">
+                        <div>
+                            <p>Booked Weddings</p>
+                            <h2>1</h2>
+                        </div>
+                        <div class="icon">❤️</div>
+                    </div>
+
+                    <div class="card purple">
+                        <div>
+                            <p>Client Revenue</p>
+                            <h2>$1,550</h2>
+                        </div>
+                        <div class="icon">⭐</div>
+                    </div>
                 </div>
 
-                <div class="card purple">
-                    <div>
-                        <p>Client Revenue</p>
-                        <h2>$1,550</h2>
-                    </div>
-                    <div class="icon">⭐</div>
+                <div class="client-search">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search clients by name or email..." />
                 </div>
+
+                <br><br>
+
+
+
+
+
+
+                <div class="client-cards">
+                    <div class="client-card">
+                        <div class="card-header">
+                            <span class="client-name">♡ Emma Thompson</span>
+                            <span class="status booked">Booked</span>
+                        </div>
+                        <div class="card-body">
+                            <p>📧 emma@example.com</p>
+                            <p>📞 +1 (555) 0123</p>
+                            <p>📅 2024-06-15</p><br>
+
+                            <p><strong>Services:</strong></p>
+                            <div class="services">
+                                <span class="service-pill">Bridal Makeup & Hair</span>
+                                <span class="service-pill">Photography</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="spent">$800 <span>Total spent</span></div>
+                            <div class="actions">
+                                ✏️ 🗑️
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="client-card">
+                        <div class="card-header">
+                            <span class="client-name">♡ Sarah Johnson</span>
+                            <span class="status prospect">Prospect</span>
+                        </div>
+                        <div class="card-body">
+                            <p>📧 sarah@example.com</p>
+                            <p>📞 +1 (555) 0456</p>
+                            <p>📅 2024-08-20</p>
+
+                            <p><strong>Services:</strong></p>
+                            <div class="services">
+                                <span class="service-pill">Luxury Bridal Package</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="spent">$0 <span>Total spent</span></div>
+                            <div class="actions">
+                                ✏️ 🗑️
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="client-card">
+                        <div class="card-header">
+                            <span class="client-name">♡ Lisa Chen</span>
+                            <span class="status married">Married</span>
+                        </div>
+                        <div class="card-body">
+                            <p>📧 lisa@example.com</p>
+                            <p>📞 +1 (555) 0789</p>
+                            <p>📅 2024-03-10</p>
+
+                            <p><strong>Services:</strong></p>
+                            <div class="services">
+                                <span class="service-pill">Engagement Photoshoot</span>
+                                <span class="service-pill">Bridal Makeup</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="spent">$750 <span>Total spent</span></div>
+                            <div class="actions">
+                                ✏️ 🗑️
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
             </div>
-
-            <div class="client-search">
-                <span class="search-icon">🔍</span>
-                <input type="text" placeholder="Search clients by name or email..." />
-            </div><br><br>
-
-
-            <!-- <div class="collapse" id="collapseExample">
-                <div class="card card-body">
-                    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-                </div>
-            </div> -->
-
-            <div class="collapse" id="collapseExample">
-                <div class="card-header">
-                    <i class="bi bi-heart"></i>
-                    <span>Add New Client</span>
-                </div>
-                <div class="card-body">
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Full Name</label>
-                                <input type="text" placeholder="Emma Thompson" />
-                            </div>
-                            <div class="form-group">
-                                <label>Email Address</label>
-                                <input type="email" placeholder="emma@example.com" />
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Phone Number</label>
-                                <input type="text" placeholder="+1 (555) 0123" />
-                            </div>
-                            <div class="form-group">
-                                <label>Wedding Date</label>
-                                <input type="date" />
-                            </div>
-                        </div>
-
-                        <div class="button-row">
-                            <button type="submit" class="btn-pink">Add Client</button>
-                            <button type="button" class="btn-secondary">Cancel</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-
-
-            <!-- client card -->
-
-            <div class="client-cards">
-                <div class="client-card">
-                    <div class="card-header">
-                        <span class="client-name">♡ Emma Thompson</span>
-                        <span class="status booked">Booked</span>
-                    </div>
-                    <div class="card-body">
-                        <p>📧 emma@example.com</p>
-                        <p>📞 +1 (555) 0123</p>
-                        <p>📅 2024-06-15</p><br>
-
-                        <p><strong>Services:</strong></p>
-                        <div class="services">
-                            <span class="service-pill">Bridal Makeup & Hair</span>
-                            <span class="service-pill">Photography</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="spent">$800 <span>Total spent</span></div>
-                        <div class="actions">
-                            ✏️ 🗑️
-                        </div>
-                    </div>
-                </div>
-
-                <div class="client-card">
-                    <div class="card-header">
-                        <span class="client-name">♡ Sarah Johnson</span>
-                        <span class="status prospect">Prospect</span>
-                    </div>
-                    <div class="card-body">
-                        <p>📧 sarah@example.com</p>
-                        <p>📞 +1 (555) 0456</p>
-                        <p>📅 2024-08-20</p>
-
-                        <p><strong>Services:</strong></p>
-                        <div class="services">
-                            <span class="service-pill">Luxury Bridal Package</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="spent">$0 <span>Total spent</span></div>
-                        <div class="actions">
-                            ✏️ 🗑️
-                        </div>
-                    </div>
-                </div>
-
-                <div class="client-card">
-                    <div class="card-header">
-                        <span class="client-name">♡ Lisa Chen</span>
-                        <span class="status married">Married</span>
-                    </div>
-                    <div class="card-body">
-                        <p>📧 lisa@example.com</p>
-                        <p>📞 +1 (555) 0789</p>
-                        <p>📅 2024-03-10</p>
-
-                        <p><strong>Services:</strong></p>
-                        <div class="services">
-                            <span class="service-pill">Engagement Photoshoot</span>
-                            <span class="service-pill">Bridal Makeup</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="spent">$750 <span>Total spent</span></div>
-                        <div class="actions">
-                            ✏️ 🗑️
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-
-
-
         </div>
     </div>
 
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const sidebar = document.getElementById("sidebar");
+        const toggleBtn = document.getElementById("toggle-btn");
+
+        toggleBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("collapsed");
+        });
+    </script>
 
 </body>
 

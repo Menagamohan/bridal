@@ -1,96 +1,153 @@
+:root {
+    --sidebar-width: 250px;
+    --sidebar-collapsed-width: 70px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background: #fde0ec;
     font-family: 'Segoe UI', sans-serif;
+    background-color: #f9ecf1;
 }
 
-.card-custom {
-    background: #fecbe7;
-    border-radius: 15px;
-    display: inline-flex;
-    align-items: center;
-    padding: 12px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
 }
 
-.icon-box {
-    width: 48px;
-    height: 48px;
-    background-color: #f48fb1;
-    border-radius: 12px;
+
+/* Sidebar */
+
+.sidebar {
+    width: var(--sidebar-width);
+    background: linear-gradient(180deg, #fce4ec, #f8d0de);
+    padding: 20px;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.sidebar.collapsed {
+    width: var(--sidebar-collapsed-width);
+}
+
+.sidebar .brand-info {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-right: 12px;
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
-.icon-box i {
-    font-size: 20px;
+.sidebar .brand-text {
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+}
+
+.sidebar.collapsed .brand-text,
+.sidebar.collapsed .nav-links span {
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    display: inline-block;
+}
+
+
+/* Sidebar Links */
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    color: #000;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+    margin-bottom: 8px;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    background: linear-gradient(to right, #fc98a9, #fb99c2, #bfaceb, #f7cbea, #f8e7b1);
     color: white;
 }
 
-.title {
-    font-weight: 700;
+.nav-links i {
     font-size: 20px;
-    color: #3d1b32;
+    margin-right: 10px;
 }
 
-.subtitle {
-    font-size: 15px;
-    color: #783d6f;
-    display: flex;
-    align-items: center;
-    gap: 6px;
+.sidebar.collapsed .nav-links i {
+    margin-right: 0;
 }
 
-.back-btn {
-    border-radius: 50%;
-    width: 28px;
-    height: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 12px;
-    cursor: pointer;
-    color: #4a044e;
-}
 
-.content {
-    margin-left: 240px;
+/* Main Content */
+
+.main-content {
+    flex: 1;
     padding: 20px;
-    transition: margin-left 0.3s ease;
+    transition: all 0.3s ease;
+    width: calc(100% - var(--sidebar-width));
 }
 
-.collapsed~.content {
-    margin-left: 80px;
+.sidebar.collapsed~.main-content {
+    width: calc(100% - var(--sidebar-collapsed-width));
 }
 
-.sparkles {
-    font-size: 15px;
+
+/* Toggle Button */
+
+.toggle-btn {
+    position: absolute;
+    top: 10px;
+    left: calc(var(--sidebar-width) + 10px);
+    z-index: 100;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: left 0.3s ease;
 }
 
-.sidebar {
-    width: 310px;
-    background: linear-gradient(180deg, #fce4ec, #f8d0de);
-    min-height: 100vh;
-    display: flex;
-    padding-left: 30px;
-    padding-right: 20px;
-    flex-direction: column;
+.sidebar.collapsed~.main-content .toggle-btn {
+    left: calc(var(--sidebar-collapsed-width) + 10px);
 }
 
-.sidebar .nav-link {
-    color: #0a0808;
-    padding: 15px;
-    border-radius: 8px;
-    transition: all 0.2s;
+
+/* Example Content Styling */
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
-.sidebar .nav-link.active,
-.sidebar .nav-link:hover {
-    background-color: #f8bbd0;
-    width: 270px;
-    color: #000;
-    font-weight: 500;
+p {
+    font-size: 16px;
+    color: #333;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: absolute;
+        z-index: 999;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+    .main-content {
+        width: 100% !important;
+    }
+    .sidebar.collapsed {
+        left: -250px;
+    }
 }
 
 .premium {
