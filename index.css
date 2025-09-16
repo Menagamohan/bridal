@@ -301,7 +301,7 @@ p {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     overflow: hidden;
     height: 420px;
-    width: 910px;
+    width: 880px;
     border: none;
 }
 
@@ -310,7 +310,7 @@ p {
     background: linear-gradient(135deg, #ffe2ec, #f8d2e3, #f3d8ef);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     overflow: hidden;
-    width: 500px;
+    width: 450px;
     border: none;
 }
 
@@ -320,7 +320,7 @@ p {
 .card-header-custom {
     padding: 12px 20px;
     font-weight: 600;
-    width: 910px;
+    width: 880px;
     font-size: 18px;
     background: linear-gradient(90deg, #f06292, #f48fb1);
     color: white;
@@ -338,6 +338,7 @@ p {
     color: white;
     border-radius: 20px 20px 0 0;
     display: flex;
+    width: 450px;
     align-items: center;
     justify-content: space-between;
 }
@@ -349,14 +350,14 @@ p {
     border: none;
     padding: 14px 20px;
     background: transparent;
-    width: 910px;
+    width: 880px;
 }
 
 .list-group-items {
     border: none;
     padding: 14px 20px;
     background: transparent;
-    width: 450px;
+    width: 420px;
 }
 
 
