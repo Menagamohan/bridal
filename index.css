@@ -301,7 +301,7 @@ p {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     overflow: hidden;
     height: 420px;
-    width: 830px;
+    width: 780px;
     border: none;
 }
 
@@ -320,7 +320,7 @@ p {
 .card-header-custom {
     padding: 12px 20px;
     font-weight: 600;
-    width: 830px;
+    width: 780px;
     font-size: 18px;
     background: linear-gradient(90deg, #f06292, #f48fb1);
     color: white;
@@ -350,7 +350,7 @@ p {
     border: none;
     padding: 14px 20px;
     background: transparent;
-    width: 830px;
+    width: 780px;
 }
 
 .list-group-items {
@@ -512,5 +512,55 @@ p {
     }
     .main-content {
         margin-left: 0;
+    }
+}
+
+
+/* 👇 Mobile Responsive Styles Only */
+
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+    }
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        height: 100vh;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        width: var(--sidebar-width);
+    }
+    .sidebar.collapsed {
+        left: 0;
+    }
+    .main-content {
+        width: 100% !important;
+        padding-top: 60px;
+    }
+    .toggle-btn {
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        z-index: 1100;
+        background: #f06292;
+        color: white;
+        border-radius: 8px;
+        padding: 6px 10px;
+    }
+    /* When sidebar is open, dim background (optional) */
+    .overlay {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 999;
+        display: none;
+    }
+    .sidebar.collapsed+.overlay {
+        display: block;
     }
 }
