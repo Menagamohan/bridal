@@ -302,7 +302,7 @@ p {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     overflow: hidden;
     height: 420px;
-    width: 700px;
+    width: 730px;
     border: none;
 }
 
@@ -322,7 +322,7 @@ p {
 .card-header-custom {
     padding: 12px 20px;
     font-weight: 600;
-    width: 700px;
+    width: 730px;
     font-size: 18px;
     background: linear-gradient(90deg, #f06292, #f48fb1);
     color: white;
@@ -352,7 +352,7 @@ p {
     border: none;
     padding: 14px 20px;
     background: transparent;
-    width: 700px;
+    width: 730px;
 }
 
 .list-group-items {
