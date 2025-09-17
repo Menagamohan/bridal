@@ -297,16 +297,18 @@ p {
 
 .card-custom {
     border-radius: 20px;
+    position: relative;
     background: linear-gradient(135deg, #ffe2ec, #f8d2e3, #f3d8ef);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     overflow: hidden;
     height: 420px;
-    width: 780px;
+    width: 700px;
     border: none;
 }
 
 .card-customs {
     border-radius: 20px;
+    position: relative;
     background: linear-gradient(135deg, #ffe2ec, #f8d2e3, #f3d8ef);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     overflow: hidden;
@@ -320,7 +322,7 @@ p {
 .card-header-custom {
     padding: 12px 20px;
     font-weight: 600;
-    width: 780px;
+    width: 700px;
     font-size: 18px;
     background: linear-gradient(90deg, #f06292, #f48fb1);
     color: white;
@@ -350,7 +352,7 @@ p {
     border: none;
     padding: 14px 20px;
     background: transparent;
-    width: 780px;
+    width: 700px;
 }
 
 .list-group-items {
