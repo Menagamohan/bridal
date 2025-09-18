@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridal Studio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff5fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            background: white;
+            width: 490px;
+            height: 350px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding-bottom: 30px;
+        }
+        
+        .header {
+            background: linear-gradient(to right, #ff6584, #ffa1c1);
+            padding: 15px 0;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+        
+        .header h2 {
+            color: white;
+            margin: 0;
+            font-weight: bold;
+        }
+        
+        .tabs {
+            display: flex;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .tab {
+            flex: 1;
+            padding: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .tab.active {
+            background-color: #fbeef3;
+            border-bottom: 2px solid #ff6584;
+            border-radius: 20px;
+        }
+        
+        input[type="email"],
+        input[type="password"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        
+        .btn {
+            background-color: #ff6584;
+            color: white;
+            border: none;
+            padding: 12px 0;
+            width: 80%;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        
+        .btn:hover {
+            background-color: #ff4f72;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h2>Bridal Studio</h2>
+        </div>
+        <p>Sign in to your account or create a new one</p>
+
+        <div class="tabs">
+            <div class="tab active" onclick="showTab('signin')">Sign In</div>
+            <div class="tab" onclick="showTab('signup')">Sign Up</div>
+        </div>
+
+        <div id="signin" class="form-section">
+            <form>
+                <input type="email" placeholder="Enter your email" required>
+                <br>
+                <input type="password" placeholder="Enter your password" required>
+                <br>
+                <button type="submit" class="btn">Sign In</button>
+            </form>
+        </div>
+
+        <div id="signup" class="form-section" style="display:none;">
+            <form>
+                <input type="email" placeholder="Enter your email" required>
+                <br>
+                <input type="password" placeholder="Create a password" required>
+                <br>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            document.querySelectorAll('.form-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(tabName).style.display = 'block';
+
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+    </script>
+
+</body>
+
+</html>
